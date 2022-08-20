@@ -4,6 +4,7 @@
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "no-undef": "off",
-    "import/no-commonjs": "off"
+    "import/no-commonjs": "off",
+    "no-unused-vars": "off"
   }
 }
