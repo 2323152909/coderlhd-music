@@ -5,7 +5,7 @@ import './index.less'
 function index() {
   return (
     <View className='index'>
-        <Text>Hello world!</Text>
+        <Text>时评首页</Text>
       </View>
   )
 }

@@ -30,7 +30,7 @@ export const useSelector = create(
               },
               actions: {
                 ...pre.actions,
-                ...newProcessor
+                ...newActions
               }
             }
           },
@@ -66,7 +66,8 @@ export const useSelector = create(
                   }
 
                   return selectFunc(curState[namespace], curState)
-                }
+                },
+                dispatch: dispatchFunc
               }
             )
           }

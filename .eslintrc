@@ -5,6 +5,14 @@
     "react/react-in-jsx-scope": "off",
     "no-undef": "off",
     "import/no-commonjs": "off",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "import/first": "off",
+    "react/jsx-indent-props": "off",
+    "jsx-quotes": "off",
+    "no-shadow": "off",
+    "import/no-named-as-default": "off",
+    "react-hooks/rules-of-hooks": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/jsx-closing-bracket-location": "off"
   }
 }

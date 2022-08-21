@@ -1,28 +1,45 @@
 import axios from 'axios'
 
-export default function request(config) {
-  const instance = axios.create({
-    baseURL: 'http://coderlhd.life:9001',
-    timeout: 5000
-  })
+const baseURL = 'http://coderlhd.life:9001'
 
-  instance.interceptors.request.use(
-    req => {
-      return req
-    },
-    error => {
-      return error
-    }
-  )
+class Request {
+  constructor(baseURL) {
+    this.baseURL = baseURL
+  }
 
-  instance.interceptors.response.use(
-    res => {
-      return res.data
-    },
-    error => {
-      return error
-    }
-  )
+  request(config) {
+    const instance = axios.create({
+      baseURL: this.baseURL,
+      timeout: 5000
+    })
 
-  return instance(config)
+    instance.interceptors.request.use(
+      (req) => {
+        return req
+      },
+      (error) => {
+        return error
+      }
+    )
+
+    instance.interceptors.response.use(
+      (res) => {
+        return res.data
+      },
+      (error) => {
+        return error
+      }
+    )
+
+    return instance(config)
+  }
+
+  get(url, params) {
+    return this.request({ url, params, method: 'get' })
+  }
+  post(url, data) {
+    return this.request({ url, data, method: 'post' })
+  }
 }
+
+export default new Request(baseURL)

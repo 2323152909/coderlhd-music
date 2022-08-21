@@ -1,0 +1,49 @@
+:root,
+page {
+  // Color Palette
+  --orange: #FD5E0F;
+
+  // Component Colors
+  --primary-color: var(--orange);
+
+  --toast-max-width: 328px;
+  --toast-font-size: 30px;
+  --toast-padding: 44px 94px;
+  --toast-icon-font-size: 80px;
+  --toast-text-padding: 40px 56px;
+  --toast-text-min-width: none;
+
+  --dialog-width: 518px;
+  --dialog-font-size: 32px;
+  --dialog-message-font-size: 28px;
+  --dialog-header-padding-top: 40px;
+  --dialog-has-title-message-padding-top: 20px;
+  --dialog-has-title-message-color: #999999;
+  --dialog-confirm-button-color: var(--orange);
+
+  --navbar-z-index:999;
+  --navbar-height:88px;
+  --navbar-line-height:88px;
+  --navbar-icon-color:#000;
+}
+
+view,
+.hydrated {
+  box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.taroify-toast--text {
+  width: max-content !important;
+}
+
+.taroify-dialog__header + .taroify-dialog__content .taroify-dialog__message {
+  padding-bottom: 40px;
+}
+
+.taroify-dialog__footer .taroify-dialog__confirm {
+  font-weight: 500;
+}

@@ -7,9 +7,10 @@
     "urlCheck": true,
     "es6": false,
     "enhance": false,
-    "compileHotReLoad": false,
-    "postcss": false,
-    "minified": false
+    "compileHotReLoad": true,
+    "postcss": true,
+    "minified": false,
+    "useCompilerModule": true
   },
   "compileType": "miniprogram"
 }
