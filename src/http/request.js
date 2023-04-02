@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseURL = 'http://music.coderlhd.life/api'
+const baseURL = 'http://music.coderlhd.top/api'
 
 class Request {
   constructor(baseURL) {
